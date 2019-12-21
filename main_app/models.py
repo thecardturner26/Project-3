@@ -7,71 +7,72 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 
 class Days(models.Model):
+  name = models.CharField(max_length=5, default='')
   monday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(max_length=5),
         size=4
   ),
     size=4
   )
   tuesday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(default='20:00' , max_length=5),
         size=4
   ),
     size=4
   )
   wednesday = ArrayField(
       ArrayField(
-        models.TimeField(),
+         models.CharField(default='20:00', max_length=5),
         size=4
   ),
     size=4
   )
   thursday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(default='20:00', max_length=5),
         size=4
   ),
     size=4
   )
   friday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(default='20:00', max_length=5),
         size=4
   ),
     size=4
   )
   saturday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(default='20:00', max_length=5),
         size=4
   ),
     size=4
   )
   sunday = ArrayField(
       ArrayField(
-        models.TimeField(),
+        models.CharField(default='20:00', max_length=5),
         size=4
   ),
     size=4
   )
   
-  def __str__(self):
-    return self.monday
+  def __arry__(self):
+    return self.name
 
 
 class Pills(models.Model):
   name = models.CharField(max_length=80)
   total = models.IntegerField()
-  days = models.ManyToManyField(Days)
+  pil_days = models.ManyToManyField(Days)
   dosage = models.IntegerField()
   def __str__(self):
     return self.name
 
 class Appointments(models.Model):
   name = models.CharField(max_length=60)
-  date = models.DateField()
+  app_date = models.DateField()
   practioner = models.CharField(max_length=60)
   location = models.CharField(max_length=100)
   note = models.TextField()
