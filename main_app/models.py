@@ -3,7 +3,6 @@ from django.urls import reverse
 from datetime import date, datetime
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
-from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -91,7 +90,3 @@ class Patient(models.Model):
   def __str__(self):
     return self.name
   
-
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    patients = models.ManyToManyField(Patient)
