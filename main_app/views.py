@@ -4,6 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
+def login(request):
+    return render(request, 'login.html')
 def patients_details(request):
     return render(request, 'patients/details.html')
 def patients_index(request):

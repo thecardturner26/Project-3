@@ -6,36 +6,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Time Capsule</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
-   
+    <title>Time Capsules</title>
 </head>
 <body>
-    <header class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <ul>
-                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Time Capsule</a></li>
-                </ul>
-                <ul class="right">
-                      <li><a href="{% url 'about' %}">About</a></li>
-  {% if user.is_authenticated %}
-    <li><a href="{% url 'patient_details' %}">Add a Patient</a></li>
-    <li><a href="{% url 'patient_index' %}">View All Patients</a></li>
-  {% else %}
-     <li><a href="{% url 'signup' %}">Sign Up</a></li>
-     <li><a href="{% url 'login' %}">Log In</a></li>
-  {% endif %}
-</ul>
-            </div>
-        </nav>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="brand-logo" href="/"><h1>Time Capsules </h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+    <ul class="nav justify-content-end">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/registration">Sign up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/patients">View All Patients</a>
+      </li>
+      
+    </ul>
+ 
+</nav>
     </header>
     <main class="container">
-        {% block content %}
-        {% endblock %}
+        
     </main>
   	<footer class="page-footer">
        <div class="right">All Rights Reserved, &copy; 2020 Time Capsule &nbsp;</div>
     </footer>
+    {% block content %}
+        {% endblock %}
 </body>
 </html>

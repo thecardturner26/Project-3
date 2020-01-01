@@ -393,9 +393,10 @@ h6, .h6 {
 
 .rxlabel {
   background: linear-gradient(90deg, rgba(235,235,235,1) 15%, rgba(255,255,255,1) 50%, rgba(235,235,235,1) 85%);
-  border:  solid 4px rgb(191, 35, 0);
+  border:  solid 4px rgba(191, 35, 0, 0.7);
   border-radius: 40px; 
   width: 60%;
+  height: 100%;
   margin-top: 5%;
   padding: 150px;
   margin-right: auto;
@@ -404,7 +405,7 @@ h6, .h6 {
 
 #log-in {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 40%;
   width: 50%;
   margin: -100px 0 0 -100px;
@@ -418,6 +419,12 @@ h6, .h6 {
 #inputPassword { 
   background-color:  rgba(252, 235, 0, 0.2);
   margin-left: 35px
+}
+
+.tc-logo {
+color: #007bff;
+margin-top: -28%;
+margin-left: 20%; 
 }
 
 .lead {
