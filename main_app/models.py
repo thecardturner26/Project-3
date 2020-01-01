@@ -7,55 +7,55 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 
 class Days(models.Model):
-  name = models.CharField(max_length=5, default='')
+  name = models.CharField(max_length=10, default='', blank=True)
   monday = ArrayField(
       ArrayField(
-        models.CharField(max_length=5),
+        models.CharField(default='' , max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   tuesday = ArrayField(
       ArrayField(
-        models.CharField(default='20:00' , max_length=5),
+        models.CharField(default='' , max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   wednesday = ArrayField(
       ArrayField(
-         models.CharField(default='20:00', max_length=5),
+         models.CharField(default='', max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   thursday = ArrayField(
       ArrayField(
-        models.CharField(default='20:00', max_length=5),
+        models.CharField(default='', max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   friday = ArrayField(
       ArrayField(
-        models.CharField(default='20:00', max_length=5),
+        models.CharField(default='', max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   saturday = ArrayField(
       ArrayField(
-        models.CharField(default='20:00', max_length=5),
+        models.CharField(default='', max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   sunday = ArrayField(
       ArrayField(
-        models.CharField(default='20:00', max_length=5),
+        models.CharField(default='', max_length=5, blank=True),
         size=4
   ),
-    size=4
+    size=4, blank=True
   )
   
   def __arry__(self):
