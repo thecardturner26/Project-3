@@ -18,5 +18,8 @@
 # Trello
 ### https://trello.com/b/DzpmOdCf/pill-pushers-project-3
 
+# Pitch Deck
+### https://docs.google.com/presentation/d/1wwSaIa3lynze9j5Nevv-QvCU3npozk2wLUddogqfrCI/edit?usp=sharing
+
 # Current app
 <img src="https://i.imgur.com/Ii2VY7N.png">
